@@ -1,0 +1,96 @@
+.img{
+    border-radius: 14px;
+    width: 276px;
+    height: 268px;
+}
+
+.carCard {
+    width: 276px;
+    height: 424px;
+}
+
+.model {
+    color: #3470ff;
+    
+}
+
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #101828;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.title>div:first-child {
+    max-width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.location{
+    display: flex;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #8d929a;
+}
+
+.location > div:not(:last-child)::after {
+  content: "|";
+  margin: 0 6px;
+  color: #8d929a;
+}
+
+.location>div:not(:last-child)::after {
+    content: "|";
+    margin: 0 6px;
+    color: #8d929a;
+}
+
+.button {
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 12px 99px;
+    background-color: #3470ff;
+    line-height: 1.25;
+    width: 100%;
+    color: #fff;
+    margin-top: 28px;
+    transition: transform 0.2s ease,background-color 0.2s ease;
+}
+
+
+
+
+.button:hover {
+    background-color: #0b44cd;
+}
+
+
+/* CarCard.module.css */
+
+.imageWrapper {
+    position: relative;
+}
+
+.favoriteIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    fill: transparent;
+    stroke: #ffffff;
+    transition: fill 0.2s ease;
+}
+
+.favoriteIcon.active {
+    fill: #3470ff;
+}
