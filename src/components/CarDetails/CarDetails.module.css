@@ -34,7 +34,7 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 1.2;
-    color: #101828;
+    color: var(--color-text);
 }
 
 .formInput {
@@ -112,7 +112,7 @@
 }
 
 .desc svg{
-    fill:black;
+    fill: var(--color-text) ;
     padding-top: 3px;
 }
 

@@ -31,6 +31,7 @@ const CustomInput = ({ name, prefix, className, placeholder }) => {
         style={{
           paddingLeft: prefix ? 50 : 20,
           boxSizing: "border-box",
+          backgroundColor: "var(--input-bg)"
         }}
       />
       {field.value && (
@@ -40,7 +41,7 @@ const CustomInput = ({ name, prefix, className, placeholder }) => {
             left: 10,
             top: "49%",
             transform: "translateY(-50%)",
-            color: "#101828",
+            color: "var(--input-color)",
             pointerEvents: "none",
             fontWeight: "500",
             fontSize: "16px",

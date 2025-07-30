@@ -56,7 +56,7 @@ export default function CarCard({ car }) {
                 <div>Suv</div>
                 <div>{formattedMileage} km</div>
             </div>
-            <button className={css.button} type="button" onClick={(e) => handleBtnMore(car.id, e)}>Read More</button>
+            <button className={css.button} type="button" onClick={(e) => handleBtnMore(car.id, e)}>Read more</button>
         </div>
     )
 }

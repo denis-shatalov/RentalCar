@@ -12,6 +12,7 @@ import CustomInput from "./CustomInput";
 import { fetchCars } from "../../redux/cars/operations";
 import { resetCars } from "../../redux/cars/slice";
 import { setSelectedFilters } from "../../redux/filters/slice";
+import { useTheme } from "../../utils/useTheme";
 
 
 
@@ -22,6 +23,7 @@ const priceOptions = prices.map((p) => ({ value: p, label: p }));
 export default function FilterForm() {
   const dispatch = useDispatch();
   const brands = useSelector(selectBrands);
+  const { theme } = useTheme();
 
   useEffect(() => {
     dispatch(fetchBrand());
@@ -43,6 +45,7 @@ export default function FilterForm() {
   
   return (
     <Formik
+      key={theme}
   initialValues={{
     brand: null,
     price: null,
@@ -61,19 +64,20 @@ export default function FilterForm() {
   dispatch(resetCars());                 // сбрасываем старые машины
   dispatch(fetchCars({ page: 1, filters })); 
   }}
+  
 >
-      {({ setFieldValue, values }) => (
+      {({ setFieldValue, values, resetForm }) => (
         <Form className={css.filterBox}>
           <div className={css.selectWrapper}>
             <label className={css.label}>Car brand</label>
             <Select
+              key={theme}
               name="brand"
               options={brandOptions}
               placeholder="Choose a brand"
               onChange={(val) => setFieldValue("brand", val)}
               value={values.brand}
               styles={customStyles}
-              className={css.select}
               components={customComponents}
 />
           </div>
@@ -81,9 +85,9 @@ export default function FilterForm() {
           <div className={css.selectWrapper}>
             <label className={css.label}>Price / 1 hour</label>
             <Select
+              key={`price-${theme}`}
               name="price"
               options={priceOptions}
-              className={css.select}
               placeholder="Choose a price"
               onChange={(val) => setFieldValue("price", val)}
               value={values.price}
@@ -117,6 +121,23 @@ export default function FilterForm() {
               Search
             </button>
           </div>
+          <button
+            type="button"
+            className={css.btnReset}
+            onClick={() => {
+              resetForm();
+              dispatch(setSelectedFilters({
+                brand: "",
+                price: "",
+                mileageFrom: "From",
+                mileageTo: "To",
+              }));
+              dispatch(resetCars());
+              dispatch(fetchCars({ page: 1, filters: {} }));
+            }}>
+            Reset filters
+          </button>
+
         </Form>
       )}
     </Formik>

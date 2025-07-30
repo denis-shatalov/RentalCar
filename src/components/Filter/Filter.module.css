@@ -1,6 +1,6 @@
 .filterBox{
-    width: 924px;
     height: 68px;
+    justify-content: center;
     margin: 0 auto;
     margin-top: 84px;
     margin-bottom: 56px;
@@ -9,43 +9,19 @@
     align-items: flex-end;
 }
 
-.select {
+/* .select {
     font-family: "Manrope", sans-serif;
     box-sizing: border-box;
     border-radius: 12px;
     height: 44px;
-    /* padding: 0 16px; */
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;
     color: #101828;
     border: none;
-    background-color: #f7f7f7;
     width: 204px;
-}
-
-
-
-
-/* .arrowIcon {
-    position: absolute;
-    top: 70%;
-    right: 16px;
-    width: 16px;
-    height: 16px;
-    transform: translateY(-50%) rotate(0deg);
-    transition: transform 0.2s ease;
-    pointer-events: none;
-    fill: rgb(0, 0, 0);
- 
-}
-
-.selectWrapper:focus-within .arrowIcon {
-    transform: translateY(-50%) rotate(180deg); }
-
-.selectPrice{
-    width: 196px;
 } */
+
 
 .inputPrice{
     font-family: "Manrope", sans-serif;
@@ -53,12 +29,13 @@
     border-radius: 0 12px 12px 0;
     width: 160px;
     height: 44px;
-    background-color: #f7f7f7;
+    background-color: var(--input-bg);
+    color: var(--input-color);
     border: none;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;
-    color: #101828;
+    
     padding: 12px 0 12px 24px;
 }
 
@@ -97,4 +74,19 @@
     font-size: 12px;
     line-height: 1.33333;
     color: #8d929a;
+}
+
+.btnReset {
+    margin-bottom: 15px;
+    background: none;
+    border: none;
+    color: #3470ff;
+    padding: 0px;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.btnReset:hover {
+    color: #0b44cd;
 }

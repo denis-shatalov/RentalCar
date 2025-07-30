@@ -11,7 +11,8 @@
     line-height: 1.2;
     color: #fff;
     margin-bottom: 16px;
-
+    opacity: 0;
+    animation: slideInLeft 1s forwards;
 }
 
 .text{
@@ -20,6 +21,8 @@
     line-height: 1.3;
     color: #fff;
     margin-bottom: 40px;
+    opacity: 0;
+    animation: slideInRight 1s 0.5s forwards;
 }
 
 .button {
@@ -31,6 +34,8 @@
     line-height: 1.25;
     color: #fff;
     transition: transform 0.2s ease, background-color 0.2s ease;
+    opacity: 0;
+    animation: slideInRight 1s 0.7s forwards;
 }
 
 .button:hover{
@@ -44,3 +49,31 @@
     background-size: cover;
     background-position: center;
 }
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(250px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+/* ывдалывдлаоыдлваодлыв */

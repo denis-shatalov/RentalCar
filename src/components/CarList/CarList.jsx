@@ -11,6 +11,7 @@ import { selectSelectedFilters } from "../../redux/filters/selectors";
 import CarCard from "../CarCard/CarCard";
 import css from "./CarList.module.css";
 import Loader from "../Loader/Loader";
+import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
 
 export default function CarsList() {
   const dispatch = useDispatch();
@@ -54,6 +55,7 @@ export default function CarsList() {
           Load More
         </button>
       )}
+      <ScrollToTopButton />
     </div>
   );
 }

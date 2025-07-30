@@ -1,6 +1,38 @@
+
 :root {
-    /* Typography */
     --font-family: "Manrope", sans-serif;
+    --color-text: #101828;
+    --color-secondary: #8d929a;
+    --color-accent: #3470ff;
+    --color-accent-hover: #0b44cd;
+    --color-button-text: #ffffff;
+    --color-bg: #ffffff;
+    --color-card: #ffffff;
+    --color-icon-stroke: #ffffff;
+    --color-icon-fill: transparent;
+    --input-bg: #f7f7f7;
+    --input-color: #101828;
+    --scroll-btn-bg: #444;
+    --scroll-icon-color: white;
+}
+
+[data-theme='dark'] {
+    --color-text: #f2f2f2;
+    --color-secondary: #c2c2c2;
+    --color-accent: #6698ff;
+    --color-accent-hover: #3a66c2;
+    --color-button-text: #ffffff;
+    --color-bg: #1e1e1e;
+    --color-card: #1e1e1e;
+    --color-icon-stroke: #cccccc;
+    --color-icon-fill: #3470ff1a;
+    --input-bg: #2b2b2b;
+    --input-color: #cccccc;
+    --scroll-btn-bg: #ddd;
+    --scroll-icon-color: #222;
+
+    --color2: #6698ff;
+    --color3: #f2f2f2;
 }
 
 html,
@@ -15,6 +47,12 @@ body {
     color: var(--color-text);
     margin: 0;
     padding: 0;
+}
+
+
+.carCard {
+    background-color: var(--color-card);
+    color: var(--color-text);
 }
 
 h1,

@@ -7,7 +7,7 @@ export const DropdownIndicator = (props) => {
         <use href="/sprite.svg#icon-Vector" />
           <path
           d="M5 7L10 12L15 7"
-          stroke="#101828"
+          stroke="var(--input-color)"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"

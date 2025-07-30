@@ -1,10 +1,15 @@
- const customStyles = {
+const customStyles = {
+  container: (base) => ({
+    ...base,
+    width: "224px",
+  }),
   control: (base) => ({
     ...base,
-    backgroundColor: "#f7f7f7",
+    backgroundColor: "var(--input-bg)",
     borderRadius: "12px",
+    height: "44px",
     border: "none",
-    color: "#8d929a",
+    color: "var(--input-color)",
     fontSize: "16px",
     fontWeight: 500,
     padding: "4px 8px",
@@ -12,45 +17,47 @@
   }),
   option: (base, state) => ({
     ...base,
-    backgroundColor: "#f7f7f7",
-    color: state.isFocused ? "#000000ff" : "#8d929a",
+    backgroundColor: "var(--input-bg)",
+    color: state.isFocused
+      ? "var(--color-text)"
+      : "var(--color-secondary)",
     cursor: "pointer",
     borderRadius: "12px",
   }),
   menu: (base) => ({
     ...base,
-    backgroundColor: "#f7f7f7",
+    backgroundColor: "var(--input-bg)",
     borderRadius: "12px",
     marginTop: 4,
   }),
   singleValue: (base) => ({
     ...base,
-    color: "#101828",
+    color: "var(--input-color)",
   }),
   placeholder: (base) => ({
     ...base,
-    color: "#101828",
-   }),
-      menuList: (base) => ({
+    color: "var(--input-color)",
+  }),
+  menuList: (base) => ({
     ...base,
-    maxHeight: "250px", // можно задать ограничение по высоте
+    maxHeight: "250px",
     overflowY: "auto",
-    scrollbarWidth: "thin", // Firefox: тонкий скроллбар
-    msOverflowStyle: "auto", // IE/Edge
-
-    // Chrome, Safari, Edge
+    scrollbarWidth: "thin",
+    msOverflowStyle: "auto",
     "&::-webkit-scrollbar": {
       width: "6px",
     },
     "&::-webkit-scrollbar-track": {
-      background: "#f0f0f0",
+      background: "var(--scrollbar-track-bg, #f0f0f0)",
     },
     "&::-webkit-scrollbar-thumb": {
-      backgroundColor: "#ccc",
+      backgroundColor: "var(--scrollbar-thumb-bg, #ccc)",
       borderRadius: "4px",
     },
-   
   }),
 };
+
+
+
 
 export default customStyles;
